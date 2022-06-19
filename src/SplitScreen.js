@@ -11,14 +11,16 @@ const Panel = styled.div`
 `
 
 // here we are renaming the props
-const SplitScreen = ({left:Left,right:Right}) => {
+const SplitScreen = ({children}) => {
+    const [Left, Right] = children;
+
     return(
         <Container>
             <Panel>
-                <Left/>
+                {Left}
             </Panel>
             <Panel>
-                <Right/>
+                {Right}
             </Panel>
         </Container>
     )

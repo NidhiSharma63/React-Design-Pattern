@@ -2,7 +2,7 @@ import React from "react";
 import SplitScreen from './SplitScreen'
 
 
-const leftHandComponent = () =>{
+const LeftHandComponent = () =>{
   return <h1 style={{backgroundColor:'orange',color:'white',paddingLeft:'13px'}}>Left</h1>
 }
 
@@ -12,10 +12,10 @@ const RightHandComponent = () =>{
 
 function App() {
   return (
-    <SplitScreen
-      left={leftHandComponent}
-      right={RightHandComponent}
-    />
+    <SplitScreen>
+      <LeftHandComponent/>
+      <RightHandComponent/>
+    </SplitScreen>
   );
 }
 
