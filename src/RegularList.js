@@ -4,6 +4,8 @@ const RegularList = ({items,resourcename,ItemComponent}) =>{
             
             {
                 items.map((item,index)=>(
+                    // how it will change it to people={item}
+                    console.log({[resourcename]:item}),
                     <ItemComponent key={index} {...{[resourcename]:item}}/>
                 ))
             }
