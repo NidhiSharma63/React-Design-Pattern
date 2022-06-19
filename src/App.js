@@ -1,14 +1,21 @@
 import React from "react";
+import SplitScreen from './SplitScreen'
+
+
+const leftHandComponent = () =>{
+  return <h1 style={{backgroundColor:'orange',color:'white',paddingLeft:'13px'}}>Left</h1>
+}
+
+const RightHandComponent = () =>{
+  return <h1 style={{backgroundColor:'green',color:'white',paddingLeft:'13px'}}>Right</h1>
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-    </div>
+    <SplitScreen
+      left={leftHandComponent}
+      right={RightHandComponent}
+    />
   );
 }
 

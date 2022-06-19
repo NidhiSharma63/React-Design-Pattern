@@ -1,15 +1,17 @@
+import React from "react";
 import styled from "styled-components";
 
+
+// syntax for styled components
 const Container = styled.div`
     display: flex;
 `
-
 const Panel = styled.div`
     flex: 1;
 `
 
 // here we are renaming the props
-export const SplitScreen = ({left:Left,right:Right}) => {
+const SplitScreen = ({left:Left,right:Right}) => {
     return(
         <Container>
             <Panel>
@@ -21,3 +23,5 @@ export const SplitScreen = ({left:Left,right:Right}) => {
         </Container>
     )
 }
+
+export default SplitScreen;
